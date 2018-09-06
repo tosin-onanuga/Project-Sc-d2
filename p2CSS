@@ -37,10 +37,11 @@ input[type="button"] {
   font-family: Lucida Console;
 }
 
-input[type="submit"]:hover {
+input[type="button"]:hover {
   background-color: #f0b618;
 }
 .display {
   font-size: 40px;
   font-family: sans-serif;
   color: yellow;
+}
