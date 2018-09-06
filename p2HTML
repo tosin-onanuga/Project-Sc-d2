@@ -1,0 +1,24 @@
+<html>
+
+<body>
+
+  <div class="hendrix">
+    <p class="title">Scooby Doo</p>
+    <hr/><br/>
+    <form action="#" name="myForm">
+      <h3 class="display" id="resultDiv"> </h3>
+      <div>
+        <input type="text" id="word" placeholder="Please type text here" />
+
+      </div>
+      <div>
+        <input type="button" Onclick="scooby()" value="Enter a text and Click me to scooby doo !" />
+
+      </div>
+    </form>
+
+  </div>
+
+</body>
+
+</html>
