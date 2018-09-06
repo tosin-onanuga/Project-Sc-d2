@@ -1,0 +1,13 @@
+function scooby(str) {
+  var reg = /^[^aeiou]+/i;
+  var str = document.getElementById("word").value;
+  if (str.match(reg)) {
+    str = str.replace(reg, "r");
+  } else {
+    str = "Enter a word that starts      with consonants.";
+  }
+
+  document.getElementById("resultDiv").innerHTML = str;
+
+  return str;
+}
