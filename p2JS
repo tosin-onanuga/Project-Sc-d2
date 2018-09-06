@@ -1,13 +1,40 @@
-function scooby(str) {
-  var reg = /^[^aeiou]+/i;
-  var str = document.getElementById("word").value;
-  if (str.match(reg)) {
-    str = str.replace(reg, "r");
-  } else {
-    str = "Enter a word that starts      with consonants.";
-  }
+function scooby(userText) {
+   
+ let reg = /^[b-d f-h j-n p-t v-z]+/i;
+ let reg2 = /^[^b-d f-h j-n p-t v-z]+/i;
+  userText= document.getElementById("word").value;
 
-  document.getElementById("resultDiv").innerHTML = str;
+  let newUserText = [];
 
-  return str;
+
+if(userText.match(reg2) || userText == "") {
+    document.getElementById("resultDiv").innerHTML = "Enter words that start with consonants." ;
+
+		return;
 }
+
+ newUserText = userText.trim().split(' ');
+
+for (let i = 0; i < newUserText.length; i++){
+
+	if(newUserText[i].match(reg)) {
+    newUserText[i] = newUserText[i].replace(reg, 'r');
+
+  		}
+  
+	} 
+	
+	document.getElementById("resultDiv").innerHTML = newUserText.join(' ') ;
+	
+	return newUserText.join(' ');
+}
+
+document.getElementById("usertexts").addEventListener("click", scooby);
+
+document.getElementById("myForm").addEventListener("keypress", function(event) {
+  
+  if (event.keyCode === 13) {
+  event.preventDefault();
+  }
+});
+
